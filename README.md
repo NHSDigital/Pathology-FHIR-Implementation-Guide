@@ -3,13 +3,6 @@ This repository is maintained by Pathology Team. Any queries contact us via [ema
 
 Pathology Repository of FHIR Assets for NHSE Pathology FHIR Implementation Guide [Simplifier project](https://simplifier.net/Pathology/~guides).
 
-## Developers Information
-### GitHub Actions
-*IOPS-FHIR-Validation-call* - Validates assets and examples against the FHIR packages found within package.json, and validation of SNOMED CT codes against the ontoserver. This action calls the [IOPS-FHIR-Test-Scripts repo](https://github.com/NHSDigital/IOPS-FHIR-Test-Scripts/tree/main].
-*IOPS-FHIR-QualityControlChecker-call* - Information on the IG content spell / link / error checking can be found within the [IOPS-FHIR-Test-Scripts repo](https://github.com/NHSDigital/IOPS-FHIR-Test-Scripts/tree/main/IGPageContentValidator).
-*Replace tab with 2 spaces* - Simple standardisation workflow to replace all tabs within text files with 2 spaces.
-
-Information on the QualityControlChecker can be within the [IOPS-FHIR-Test-Scripts repo](https://github.com/NHSDigital/IOPS-FHIR-Test-Scripts/tree/main/QualityControlChecker).
 
 ## Main Branch Status
 
@@ -23,3 +16,13 @@ FHIR Validation with Terminology Checks
 
  [![NHSDigital IOPS Validation)](https://github.com/NHSDigital/Pathology-FHIR-Implementation-Guide/actions/workflows/terminology.yml/badge.svg?branch=develop)](https://github.com/NHSDigital/Pathology-FHIR-Implementation-Guide/actions/workflows/terminology.yml?branch=develop)
 
+## CapabilityStatement
+The CapabilityStatement is used by the validation tool to check which profile to validate against. If no Profile is stated then the base FHIR resource will be used.
+
+## Developers Information
+### GitHub Actions
+*IOPS-FHIR-Validation-call* - Validates assets and examples against the FHIR packages found within package.json, and validation of SNOMED CT codes against the ontoserver. This action calls the [IOPS-FHIR-Test-Scripts repo](https://github.com/NHSDigital/IOPS-FHIR-Test-Scripts/tree/main].
+*IOPS-FHIR-QualityControlChecker-call* - Information on the IG content spell / link / error checking can be found within the [IOPS-FHIR-Test-Scripts repo](https://github.com/NHSDigital/IOPS-FHIR-Test-Scripts/tree/main/IGPageContentValidator).
+*Replace tab with 2 spaces* - Simple standardisation workflow to replace all tabs within text files with 2 spaces.
+
+Information on the QualityControlChecker can be within the [IOPS-FHIR-Test-Scripts repo](https://github.com/NHSDigital/IOPS-FHIR-Test-Scripts/tree/main/QualityControlChecker).
