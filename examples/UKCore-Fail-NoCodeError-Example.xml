@@ -1,5 +1,5 @@
 <AllergyIntolerance xmlns="http://hl7.org/fhir">
-  <id value="UKCore-Pass-Fail-NoCodeError-Example" />
+  <id value="UKCore-Fail-NoCodeError-Example" />
   <clinicalStatus>
     <coding>
       <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" />
