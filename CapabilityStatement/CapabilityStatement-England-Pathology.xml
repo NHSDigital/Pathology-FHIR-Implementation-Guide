@@ -1,12 +1,12 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir">
 	<id value="apim-conformance"/>
-	<url value="https://fhir.hl7.org.uk/CapabilityStatement/ukcore-conformance"/>
+	<url value="https://fhir.hl7.org.uk/CapabilityStatement/England-Pathology-conformance"/>
 	<version value="3.2.0"/>
-	<name value="UKCore"/>
+	<name value="EnglandPathology-conformance"/>
 	<status value="active"/>
 	<date value="2022-12-16T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
-	<description value="Conformance requirements for UKCore"/>
+	<description value="Conformance requirements for NHSEngland Pathology"/>
 	<kind value="requirements"/>
 	<fhirVersion value="4.0.1"/>
 	<format value="application/fhir+json"/>
