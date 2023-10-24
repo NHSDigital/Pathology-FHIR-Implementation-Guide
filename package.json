@@ -1,0 +1,12 @@
+{
+  "name": "UKCore.R4.STU.02.00.00",
+  "version": "2.0.0",
+  "description": "UK Core FHIR profiles and Assets",
+  "author": "NHS Digital",
+  "fhirVersions": [
+    "4.0.1"
+  ],
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1"
+  }
+}
