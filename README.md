@@ -24,7 +24,7 @@ The CapabilityStatement is used by the validation tool to check which profile to
 
 ## Developers Information
 ### GitHub Actions
-- *IOPS-FHIR-Validation-call* - Validates assets and examples against the FHIR packages found within package.json, and validation of SNOMED CT codes against the ontoserver. This action calls the [IOPS-FHIR-Test-Scripts repo](https://github.com/NHSDigital/IOPS-FHIR-Test-Scripts/tree/main].
+- *IOPS-FHIR-Validation-call* - Validates assets and examples against the FHIR packages found within package.json, and validation of SNOMED CT codes against the ontoserver. This action calls the [IOPS-FHIR-Test-Scripts repo](https://github.com/NHSDigital/IOPS-FHIR-Test-Scripts/tree/main).
 - *IOPS-FHIR-QualityControlChecker-call* - (Optional) Information on the IG content spell / link / error checking can be found within the [IOPS-FHIR-Test-Scripts repo](https://github.com/NHSDigital/IOPS-FHIR-Test-Scripts/tree/main/IGPageContentValidator).
 - *Replace tab with 2 spaces* - (Optional) Simple standardisation workflow to replace all tabs within text files with 2 spaces.
 
