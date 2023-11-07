@@ -19,9 +19,9 @@
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MessageHeader" />
                 </meta>
                 <eventCoding>
-                    <system value="http://snomed.info/sct" />
-                    <code value="371528001" />
-                    <display value="Pathology report" />
+                    <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+                    <code value="notification" />
+                    <display value="Event Notification" />
                 </eventCoding>
                 <destination>
                     <name value="PICKERING MEDICAL PRACTICE" />
