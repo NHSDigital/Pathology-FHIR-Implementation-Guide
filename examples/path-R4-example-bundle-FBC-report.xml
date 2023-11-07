@@ -7,7 +7,7 @@
         <system value="https://tools.ietf.org/html/rfc4122" />
         <value value="866e3e7a-2142-4af2-8461-2d2e876e8521" />
     </identifier>
-    <type value="message" />
+    <type value="collection" />
     
     <entry>
         <fullUrl value="urn:uuid:8a6d85b8-9837-4fed-a257-4cf207988338" />
