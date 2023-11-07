@@ -171,7 +171,7 @@
                 </identifier>
                 <basedOn>
                     <reference value="urn:uuid:1c38d507-9ad7-4b49-ba91-7da204842cac" />
-                    <type value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+                    <type value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-ServiceRequest" />
                 </basedOn>
                 <status value="final" />
 				<category> 
