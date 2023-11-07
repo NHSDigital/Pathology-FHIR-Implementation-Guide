@@ -1,5 +1,5 @@
 # Pathology-FHIR-Implementation-Guide
-This repository is maintained by Pathology Team. Any queries contact us via [email].
+This repository is maintained by Pathology Team. Any queries contact us via [email test].
 
 Pathology Repository of FHIR Assets for NHSE Pathology FHIR Implementation Guide [Simplifier project](https://simplifier.net/Pathology/~guides).
 
