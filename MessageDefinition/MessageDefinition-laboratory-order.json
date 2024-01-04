@@ -1,0 +1,49 @@
+{
+    "resourceType": "MessageDefinition",
+    "id": "1daf7d82-13f7-4dcc-8934-21e855defdd9",
+    "url": "https://fhir.nhs.uk/MessageDefinition/unsolicited-observations",
+    "identifier":  [
+        {
+            "system": "https://tools.ietf.org/html/rfc4122",
+            "value": "1daf7d82-13f7-4dcc-8934-21e855defdd9"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "NHSEnglandLaboratoryOrder",
+    "title": "Observation messages",
+    "status": "active",
+    "date": "2021-07-07",
+    "eventCoding": {
+        "system": "https://fhir.nhs.uk/CodeSystem/message-event",
+        "code": "laboratory-order"
+    },
+    "description": "Unsolicited transmission of an observation message. If a Patient resource is not supplied, a NHS Number must be present in the DiaganosticReport and Observations",
+    "category": "notification",
+    "focus":  [
+        {
+            "code": "ServiceRequest",
+            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-ServiceRequest",
+            "min": 1,
+            "max": "*"
+        },
+        {
+            "code": "Specimen",
+            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Specimen",
+            "min": 1,
+            "max": "*"
+        },
+        {
+            "code": "Patient",
+            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient",
+            "min": 0,
+            "max": "1"
+        },
+        {
+            "code": "PractitionerRole",
+            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole",
+            "min": 0,
+            "max": "*"
+        }
+    ],
+    "responseRequired": "on-error"
+}
