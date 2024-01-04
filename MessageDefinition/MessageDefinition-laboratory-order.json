@@ -1,23 +1,22 @@
 {
     "resourceType": "MessageDefinition",
-    "id": "1daf7d82-13f7-4dcc-8934-21e855defdd9",
-    "url": "https://fhir.nhs.uk/MessageDefinition/unsolicited-observations",
+    "id": "5b461301-3ace-448f-aa55-c34dd41a6141",
+    "url": "https://fhir.nhs.uk/MessageDefinition/laboratory-order",
     "identifier":  [
         {
             "system": "https://tools.ietf.org/html/rfc4122",
-            "value": "1daf7d82-13f7-4dcc-8934-21e855defdd9"
+            "value": "5b461301-3ace-448f-aa55-c34dd41a6141"
         }
     ],
     "version": "1.0.0",
     "name": "NHSEnglandLaboratoryOrder",
-    "title": "Observation messages",
+    "title": "Laboratory Order",
     "status": "active",
-    "date": "2021-07-07",
+    "date": "2024-01-04",
     "eventCoding": {
         "system": "https://fhir.nhs.uk/CodeSystem/message-event",
         "code": "laboratory-order"
     },
-    "description": "Unsolicited transmission of an observation message. If a Patient resource is not supplied, a NHS Number must be present in the DiaganosticReport and Observations",
     "category": "notification",
     "focus":  [
         {
@@ -29,7 +28,7 @@
         {
             "code": "Specimen",
             "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Specimen",
-            "min": 1,
+            "min": 0,
             "max": "*"
         },
         {

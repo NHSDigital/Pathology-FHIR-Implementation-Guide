@@ -29,7 +29,7 @@
         {
             "code": "Observation",
             "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation",
-            "min": 1,
+            "min": 0,
             "max": "*"
         },
         {
