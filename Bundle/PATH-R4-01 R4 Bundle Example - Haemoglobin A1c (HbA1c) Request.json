@@ -128,7 +128,7 @@
                                 "valueCodeableConcept": {
                                     "coding":  [
                                         {
-                                            "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-NHSNumberVerificationStatus",
+                                            "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-NHSNumberVerificationStatusEngland",
                                             "code": "01"
                                         }
                                     ]
