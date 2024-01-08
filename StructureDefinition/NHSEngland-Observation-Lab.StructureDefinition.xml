@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/England/StructureDefinition/Observation-Lab" />
+  <name value="NHSEnglandObservationLab" />
+  <status value="draft" />
+  <description value="Test Result" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation-Lab" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.identifier">
+      <path value="Observation.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.code:UnifiedTestList">
+      <path value="Observation.code" />
+      <sliceName value="UnifiedTestList" />
+      <binding>
+        <strength value="required" />
+      </binding>
+    </element>
+    <element id="Observation.code:UnifiedTestList.coding.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code:UnifiedTestList.coding.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <min value="1" />
+    </element>
+    <element id="Observation.issued">
+      <path value="Observation.issued" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
