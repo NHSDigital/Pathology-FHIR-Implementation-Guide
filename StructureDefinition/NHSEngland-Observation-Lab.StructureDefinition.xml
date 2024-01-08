@@ -15,29 +15,42 @@
       <path value="Observation.identifier" />
       <min value="1" />
     </element>
-    <element id="Observation.code">
-      <path value="Observation.code" />
+    <element id="Observation.category:sliceLaboratory">
+      <path value="Observation.category" />
+      <sliceName value="sliceLaboratory" />
+    </element>
+    <element id="Observation.category:sliceLaboratory.coding">
+      <path value="Observation.category.coding" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="coding.system" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
     </element>
-    <element id="Observation.code:UnifiedTestList">
-      <path value="Observation.code" />
-      <sliceName value="UnifiedTestList" />
+    <element id="Observation.code.coding:unifiedtestlist">
+      <path value="Observation.code.coding" />
+      <sliceName value="unifiedtestlist" />
+      <min value="1" />
+      <fixedCoding>
+        <system value="http://snomed.info/sct" />
+      </fixedCoding>
       <binding>
         <strength value="required" />
+        <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-UnifiedTestList" />
       </binding>
     </element>
-    <element id="Observation.code:UnifiedTestList.coding.system">
+    <element id="Observation.code.coding:unifiedtestlist.system">
       <path value="Observation.code.coding.system" />
       <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.code:UnifiedTestList.coding.code">
+    <element id="Observation.code.coding:unifiedtestlist.code">
       <path value="Observation.code.coding.code" />
       <min value="1" />
     </element>

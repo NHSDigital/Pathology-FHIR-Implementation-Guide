@@ -14,6 +14,14 @@
       <path value="DiagnosticReport.identifier" />
       <min value="1" />
     </element>
+    <element id="DiagnosticReport.category:sliceLaboratory">
+      <path value="DiagnosticReport.category" />
+      <sliceName value="sliceLaboratory" />
+    </element>
+    <element id="DiagnosticReport.category:sliceLaboratory.coding">
+      <path value="DiagnosticReport.category.coding" />
+      <min value="1" />
+    </element>
     <element id="DiagnosticReport.issued">
       <path value="DiagnosticReport.issued" />
       <min value="1" />
