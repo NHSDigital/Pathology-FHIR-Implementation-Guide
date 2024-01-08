@@ -1,0 +1,57 @@
+{
+    "resourceType": "DiagnosticReport",
+    "id": "35d46ca1-f253-4c97-b7ee-fb5fccdf6c20",
+    "identifier": [
+        {
+            "system": "http://Y8J7D-pathlab001.com/report",
+            "value": "REP-20220130-007843"
+        }
+    ],
+    "basedOn": [
+        {
+            "reference": "urn:uuid:1c38d507-9ad7-4b49-ba91-7da204842cac"
+        }
+    ],
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                    "code": "LAB",
+                    "display": "Laboratory"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "721981007",
+                "display": "Diagnostic studies report"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "urn:uuid:ab87a3f8-1d37-44a9-804e-5e962598a6e4",
+        "display": "WELSH, Joel"
+    },
+    "issued": "2022-01-30T12:48:00+00:00",
+    "performer": [
+        {
+            "reference": "urn:uuid:8a6d85b8-9837-4fed-a257-4cf207988338",
+            "display": "TD008362 PATH LAB 001"
+        }
+    ],
+    "specimen": [
+        {
+            "reference": "urn:uuid:bab0eaec-1ec5-4598-b660-90bb38a1030d"
+        }
+    ],
+    "result": [
+        {
+            "reference": "urn:uuid:ad717ae8-cb35-4d66-ba51-e22a76b1d158"
+        }
+    ]
+}

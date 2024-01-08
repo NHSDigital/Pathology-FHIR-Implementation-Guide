@@ -15,11 +15,11 @@
       <path value="Observation.identifier" />
       <min value="1" />
     </element>
-    <element id="Observation.category:sliceLaboratory">
+    <element id="Observation.category:laboratory">
       <path value="Observation.category" />
-      <sliceName value="sliceLaboratory" />
+      <sliceName value="laboratory" />
     </element>
-    <element id="Observation.category:sliceLaboratory.coding">
+    <element id="Observation.category:laboratory.coding">
       <path value="Observation.category.coding" />
       <min value="1" />
     </element>
@@ -38,17 +38,15 @@
       <path value="Observation.code.coding" />
       <sliceName value="unifiedtestlist" />
       <min value="1" />
-      <fixedCoding>
-        <system value="http://snomed.info/sct" />
-      </fixedCoding>
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-UnifiedTestList" />
+        <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-PathologyAndLaboratoryMedicineObservables" />
       </binding>
     </element>
     <element id="Observation.code.coding:unifiedtestlist.system">
       <path value="Observation.code.coding.system" />
       <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Observation.code.coding:unifiedtestlist.code">
       <path value="Observation.code.coding.code" />

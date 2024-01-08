@@ -1,0 +1,129 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "message-events",
+    "url": "https://fhir.nhs.uk/CodeSystem/message-event",
+    "identifier":  [
+        {
+            "system": "https://fhir.nhs.uk/identifier/CodeSystem",
+            "value": "message-events"
+        }
+    ],
+    "version": "1.0.20",
+    "name": "NHSDigitalMessageEvent",
+    "title": "Message Events",
+    "status": "draft",
+    "date": "2024-01-08",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "NHS England",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "Common messaging events.",
+    "copyright": "Copyright © 2019 NHS England",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept":  [
+        {
+            "code": "prescription-order",
+            "display": "Prescription Order",
+            "definition": "Pharmacy/treatment encoded order"
+        },
+        {
+            "code": "prescription-order-update",
+            "display": "Prescription Order Update"
+        },
+        {
+            "code": "prescription-order-response",
+            "display": "Prescription Order Response",
+            "definition": "Pharmacy/treatment order acknowledgement",
+            "property":  [
+                {
+                    "code": "deprecated",
+                    "valueBoolean": true
+                }
+            ]
+        },
+        {
+            "code": "dispense-notification",
+            "display": "Dispense Notification",
+            "definition": "Dispense Notification"
+        },
+        {
+            "code": "unsolicited-observations",
+            "display": "Unsolicited Observations"
+        },
+        {
+            "code": "patient-notification",
+            "display": "Patient Notifications",
+            "definition": "Used to send CommunicationRequests"
+        },
+        {
+            "code": "vaccinations",
+            "display": "Vaccinations"
+        },
+        {
+            "code": "document",
+            "display": "Document",
+            "definition": "Original document notification and content"
+        },
+        {
+            "code": "document-notification",
+            "display": "Document Notification",
+            "definition": "Original document notification"
+        },
+        {
+            "code": "dispense-notification-update",
+            "display": "Dispense Notification Update",
+            "definition": "This message is used by the Dispensing System to notify the EPS System of an amendment to a previousy submitted dispense-notification",
+            "property":  [
+                {
+                    "code": "deprecated",
+                    "valueBoolean": true
+                }
+            ]
+        },
+        {
+            "code": "appointment",
+            "display": "Appointment",
+            "definition": "Pre-admit a patient / Patient Appointment"
+        },
+        {
+            "code": "referral",
+            "display": "Patient Referral",
+            "definition": "Patient referral/handover"
+        },
+        {
+            "code": "notification",
+            "display": "Event Notification",
+            "definition": "Event Notification"
+        },
+        {
+            "code": "encounter",
+            "display": "Patient Encounter",
+            "definition": "Can be used for an admission/discharge report or consulations"
+        },
+        {
+            "code": "patient",
+            "display": "Patient Demographics",
+            "definition": "Patient demographic change events"
+        },
+        {
+            "code": "unsolicited-action",
+            "display": "Unsolicited actions",
+            "definition": "Unsolicited actions using FHIR Task"
+        },
+        {
+            "code": "laboratory-order",
+            "display": "Laboratory Order",
+            "definition": "Laboratory Order"
+        }
+    ]
+}

@@ -1,9 +1,8 @@
 {
-  "updated": "2024-01-08T09:53:26.5046671+00:00",
+  "updated": "2024-01-08T11:05:40.8724478+00:00",
   "dependencies": {
-    "fhir.r4.nhsengland.stu1": "1.1.0",
-    "hl7.fhir.r4.core": "4.0.1",
-    "fhir.r4.ukcore.stu3.currentbuild": "0.0.6-pre-release"
+    "fhir.r4.ukcore.stu3.currentbuild": "0.0.8-pre-release",
+    "hl7.fhir.r4.core": "4.0.1"
   },
   "missing": {}
 }
