@@ -25,24 +25,6 @@
             "profile": "https://fhir.nhs.uk/England/StructureDefinition/DiagnosticReport-Lab",
             "min": 1,
             "max": "*"
-        },
-        {
-            "code": "Observation",
-            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation",
-            "min": 0,
-            "max": "*"
-        },
-        {
-            "code": "Patient",
-            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient",
-            "min": 0,
-            "max": "1"
-        },
-        {
-            "code": "PractitionerRole",
-            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole",
-            "min": 0,
-            "max": "*"
         }
     ],
     "responseRequired": "on-error"

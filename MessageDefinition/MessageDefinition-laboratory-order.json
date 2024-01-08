@@ -21,26 +21,8 @@
     "focus":  [
         {
             "code": "ServiceRequest",
-            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-ServiceRequest",
+            "profile": "https://fhir.nhs.uk/England/StructureDefinition/ServiceRequest-Lab",
             "min": 1,
-            "max": "*"
-        },
-        {
-            "code": "Specimen",
-            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Specimen",
-            "min": 0,
-            "max": "*"
-        },
-        {
-            "code": "Patient",
-            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient",
-            "min": 0,
-            "max": "1"
-        },
-        {
-            "code": "PractitionerRole",
-            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole",
-            "min": 0,
             "max": "*"
         }
     ],

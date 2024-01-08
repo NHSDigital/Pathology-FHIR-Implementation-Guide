@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/England/StructureDefinition/ServiceRequest-Lab" />
+  <name value="NHSEnglandServiceRequestLab" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ServiceRequest" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-ServiceRequest-Lab" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ServiceRequest.identifier">
+      <path value="ServiceRequest.identifier" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.identifier.value">
+      <path value="ServiceRequest.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.code">
+      <path value="ServiceRequest.code" />
+      <min value="1" />
+      <binding>
+        <strength value="extensible" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.code.coding">
+      <path value="ServiceRequest.code.coding" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.code.coding.system">
+      <path value="ServiceRequest.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.code.coding.code">
+      <path value="ServiceRequest.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.specimen">
+      <path value="ServiceRequest.specimen" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/England/StructureDefinition/Specimen" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

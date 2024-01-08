@@ -46,6 +46,13 @@
       <path value="DiagnosticReport.issued" />
       <min value="1" />
     </element>
+    <element id="DiagnosticReport.specimen">
+      <path value="DiagnosticReport.specimen" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/England/StructureDefinition/Specimen" />
+      </type>
+    </element>
     <element id="DiagnosticReport.result">
       <path value="DiagnosticReport.result" />
       <type>
