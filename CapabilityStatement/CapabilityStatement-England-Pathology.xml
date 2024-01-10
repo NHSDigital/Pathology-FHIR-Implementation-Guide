@@ -23,7 +23,7 @@
 		</resource>
 		<resource>
 			<type value="Observation"/>
-			<profile value="https://fhir.nhs.uk/England/StructureDefinition/Observation-Group-Lab"/>
+			<profile value="https://fhir.nhs.uk/England/StructureDefinition/Observation-Lab"/>
 		</resource>
 		<resource>
 			<type value="ServiceRequest"/>
