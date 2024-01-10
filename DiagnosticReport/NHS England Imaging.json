@@ -1,0 +1,51 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "80d50a66-748e-4328-922f-17fce9d0fc77",
+  "status": "final",
+  "identifier": [
+    {
+      "system": "https://example.com/accessionnumber",
+      "value": "HospitalID.AccessionNumber"
+    },
+    {
+      "system": "https://example.com/radiologyreportversion",
+      "value": "1.0"
+    }
+  ],
+  "subject": {
+    "identifier": {
+      "system": "https://fhir.nhs.uk/Id/nhs-number",
+      "value": "1234567892"
+    },
+    "display": "SMITH, John"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct"
+      },
+      {
+        "code": "371525003"
+      },
+      {
+        "display": "Clinical procedure report (record artifact)"
+      }
+    ]
+  },
+  "performer": [{
+    "identifier": {
+      "system": "https://fhir.nhs.uk/Id/ods-organisation-code",
+      "value": "ZZ123456"
+    },
+    "display": "King Charles University Hospital, Testham"
+  }],
+  "resultsInterpreter": [{
+    "identifier": {
+      "system": "https://fhir.hl7.org.uk/Id/gmc-number",
+      "value": "1234567"
+    },
+    "display": "FICTITIOUS, Ralph"
+  }],
+  "issued": "2023-09-07T11:45:41+11:00",
+  "conclusion": "Normal - no action"
+}
