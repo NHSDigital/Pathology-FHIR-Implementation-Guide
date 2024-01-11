@@ -1,0 +1,289 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "DataStandardsWales-MedicationRequest",
+  "url": "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-MedicationRequest",
+  "version": "1.0.0",
+  "name": "DataStandardsWalesMedicationRequest",
+  "title": "Data Standards Wales Medication Request",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-08-02",
+  "publisher": "NHS Wales",
+  "copyright": "2023 NHS Wales.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationRequest",
+  "baseDefinition": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationRequest.extension:medicationRepeatInformation",
+        "path": "MedicationRequest.extension",
+        "sliceName": "medicationRepeatInformation",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.status",
+        "path": "MedicationRequest.status",
+        "short": "active | cancelled | stopped"
+      },
+      {
+        "id": "MedicationRequest.statusReason",
+        "path": "MedicationRequest.statusReason",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required"
+        }
+      },
+      {
+        "id": "MedicationRequest.statusReason.coding",
+        "path": "MedicationRequest.statusReason.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.statusReason.coding.system",
+        "path": "MedicationRequest.statusReason.coding.system",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.statusReason.coding.code",
+        "path": "MedicationRequest.statusReason.coding.code",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.statusReason.coding.display",
+        "path": "MedicationRequest.statusReason.coding.display",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.category",
+        "path": "MedicationRequest.category",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.reported[x]",
+        "path": "MedicationRequest.reported[x]",
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Organization",
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson",
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-PractitionerRole",
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Patient",
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Practitioner"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.medication[x]",
+        "path": "MedicationRequest.medication[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Medication"
+            ],
+            "aggregation": [
+              "bundled"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.subject.reference",
+        "path": "MedicationRequest.subject.reference",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.subject.identifier.system",
+        "path": "MedicationRequest.subject.identifier.system",
+        "min": 1,
+        "fixedUri": "https://fhir.nhs.uk/Id/nhs-number"
+      },
+      {
+        "id": "MedicationRequest.subject.identifier.value",
+        "path": "MedicationRequest.subject.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.authoredOn",
+        "path": "MedicationRequest.authoredOn",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.requester",
+        "path": "MedicationRequest.requester",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Patient",
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Organization",
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Practitioner",
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-PractitionerRole",
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson",
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Device"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.requester.reference",
+        "path": "MedicationRequest.requester.reference",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.performer",
+        "path": "MedicationRequest.performer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-PractitionerRole",
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Practitioner",
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Organization",
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Patient",
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Device",
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson",
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-CareTeam"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.recorder",
+        "path": "MedicationRequest.recorder",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.reasonCode",
+        "path": "MedicationRequest.reasonCode",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.reasonReference",
+        "path": "MedicationRequest.reasonReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation",
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Condition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.basedOn",
+        "path": "MedicationRequest.basedOn",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-MedicationRequest",
+              "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation",
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-CarePlan",
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-ServiceRequest"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.groupIdentifier",
+        "path": "MedicationRequest.groupIdentifier",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.courseOfTherapyType",
+        "path": "MedicationRequest.courseOfTherapyType",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required"
+        }
+      },
+      {
+        "id": "MedicationRequest.courseOfTherapyType.coding",
+        "path": "MedicationRequest.courseOfTherapyType.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.courseOfTherapyType.coding.system",
+        "path": "MedicationRequest.courseOfTherapyType.coding.system",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.courseOfTherapyType.coding.code",
+        "path": "MedicationRequest.courseOfTherapyType.coding.code",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.note",
+        "path": "MedicationRequest.note",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.note.author[x]",
+        "path": "MedicationRequest.note.author[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Patient",
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Organization",
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Practitioner",
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-PractitionerRole",
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson"
+            ]
+          },
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest",
+        "path": "MedicationRequest.dispenseRequest",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.performer",
+        "path": "MedicationRequest.dispenseRequest.performer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.priorPrescription",
+        "path": "MedicationRequest.priorPrescription",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-MedicationRequest"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

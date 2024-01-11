@@ -1,128 +1,115 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "DataStandardsWales-Organization",
-    "url": "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Organization",
-    "version": "1.0.0",
-    "name": "DataStandardsWalesOrganization",
-    "title": "Data Standards Wales Organization",
-    "status": "active",
-    "experimental": false,
-    "date": "2023-08-02",
-    "publisher": "NHS Wales",
-    "copyright": "2023 NHS Wales.",
-    "fhirVersion": "4.0.1",
-    "mapping":  [
-        {
-            "identity": "v2",
-            "uri": "http://hl7.org/v2",
-            "name": "HL7 v2 Mapping"
-        },
-        {
-            "identity": "rim",
-            "uri": "http://hl7.org/v3",
-            "name": "RIM Mapping"
-        },
-        {
-            "identity": "servd",
-            "uri": "http://www.omg.org/spec/ServD/1.0/",
-            "name": "ServD"
-        },
-        {
-            "identity": "w5",
-            "uri": "http://hl7.org/fhir/fivews",
-            "name": "FiveWs Pattern Mapping"
-        }
-    ],
-    "kind": "resource",
-    "abstract": false,
-    "type": "Organization",
-    "baseDefinition": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization",
-    "derivation": "constraint",
-    "differential": {
-        "element":  [
-            {
-                "id": "Organization.identifier",
-                "path": "Organization.identifier",
-                "comment": "Identifiers for the organization SHOULD be populated if the data exists",
-                "mustSupport": true
-            },
-            {
-                "id": "Organization.identifier:odsSiteCode",
-                "path": "Organization.identifier",
-                "sliceName": "odsSiteCode",
-                "max": "0"
-            },
-            {
-                "id": "Organization.identifier:gpClusterCode",
-                "path": "Organization.identifier",
-                "sliceName": "gpClusterCode",
-                "short": "Identifies a Wales GP Cluster organization across multiple systems",
-                "definition": "Identifier for a Wales GP Cluster organization that is used to identify the organization across multiple disparate systems."
-            },
-            {
-                "id": "Organization.identifier:gpClusterCode.system",
-                "path": "Organization.identifier.system",
-                "min": 1,
-                "fixedUri": "https://fhir.nhs.wales/Id/gpcluster-code"
-            },
-            {
-                "id": "Organization.identifier:gpClusterCode.value",
-                "path": "Organization.identifier.value",
-                "min": 1
-            },
-            {
-                "id": "Organization.active",
-                "path": "Organization.active",
-                "comment": "A status of the organization (i.e., whether is still active ) SHOULD be populated if the data exists.\n\nThis active flag is not intended to be used to mark an organization as temporarily closed or under construction. Instead the Location(s) within the Organization should have the suspended status. If further details of the reason for the suspension are required, then an extension on this element should be used.\n\nThis element is labeled as a modifier because it may be used to mark that the resource was created in error.",
-                "mustSupport": true
-            },
-            {
-                "id": "Organization.name",
-                "path": "Organization.name",
-                "definition": "A name associated with the organization (e.g. ODS name).",
-                "comment": "Organization name SHALL be populated. If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches.",
-                "min": 1,
-                "mustSupport": true
-            },
-            {
-                "id": "Organization.telecom",
-                "path": "Organization.telecom",
-                "mustSupport": true
-            },
-            {
-                "id": "Organization.telecom.value",
-                "path": "Organization.telecom.value",
-                "min": 1
-            },
-            {
-                "id": "Organization.address",
-                "path": "Organization.address",
-                "mustSupport": true
-            },
-            {
-                "id": "Organization.partOf",
-                "path": "Organization.partOf",
-                "definition": "The organization of which this organization forms a part.\n\nRecommended mandatory for primary care organisations.\n\n    \"partOf\": {\n        \"reference\": \"https://directory.spineservices.nhs.uk/R4/Organization/RR805\",\n        \"identifier\": {\n            \"system\": \"https://fhir.nhs.uk/Id/ods-organization-code\",\n            \"value\": \"RR805\n        }",
-                "type":  [
-                    {
-                        "code": "Reference",
-                        "targetProfile":  [
-                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Organization"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Organization.partOf.identifier.system",
-                "path": "Organization.partOf.identifier.system",
-                "min": 1
-            },
-            {
-                "id": "Organization.partOf.identifier.value",
-                "path": "Organization.partOf.identifier.value",
-                "min": 1
-            }
-        ]
+  "resourceType": "StructureDefinition",
+  "id": "DataStandardsWales-Organization",
+  "url": "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Organization",
+  "version": "1.0.0",
+  "name": "DataStandardsWalesOrganization",
+  "title": "Data Standards Wales Organization",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-08-02",
+  "publisher": "NHS Wales",
+  "copyright": "2023 NHS Wales.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "servd",
+      "uri": "http://www.omg.org/spec/ServD/1.0/",
+      "name": "ServD"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
     }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Organization",
+  "baseDefinition": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Organization.identifier",
+        "path": "Organization.identifier",
+        "comment": "Identifiers for the organization SHOULD be populated if the data exists"
+      },
+      {
+        "id": "Organization.identifier:odsSiteCode",
+        "path": "Organization.identifier",
+        "sliceName": "odsSiteCode",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier:gpClusterCode",
+        "path": "Organization.identifier",
+        "sliceName": "gpClusterCode",
+        "short": "Identifies a Wales GP Cluster organization across multiple systems",
+        "definition": "Identifier for a Wales GP Cluster organization that is used to identify the organization across multiple disparate systems."
+      },
+      {
+        "id": "Organization.identifier:gpClusterCode.system",
+        "path": "Organization.identifier.system",
+        "min": 1,
+        "fixedUri": "https://fhir.nhs.wales/Id/gpcluster-code"
+      },
+      {
+        "id": "Organization.identifier:gpClusterCode.value",
+        "path": "Organization.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Organization.active",
+        "path": "Organization.active",
+        "comment": "A status of the organization (i.e., whether is still active ) SHOULD be populated if the data exists.\n\nThis active flag is not intended to be used to mark an organization as temporarily closed or under construction. Instead the Location(s) within the Organization should have the suspended status. If further details of the reason for the suspension are required, then an extension on this element should be used.\n\nThis element is labeled as a modifier because it may be used to mark that the resource was created in error."
+      },
+      {
+        "id": "Organization.name",
+        "path": "Organization.name",
+        "definition": "A name associated with the organization (e.g. ODS name).",
+        "comment": "Organization name SHALL be populated. If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches.",
+        "min": 1
+      },
+      {
+        "id": "Organization.telecom.value",
+        "path": "Organization.telecom.value",
+        "min": 1
+      },
+      {
+        "id": "Organization.partOf",
+        "path": "Organization.partOf",
+        "definition": "The organization of which this organization forms a part.\n\nRecommended mandatory for primary care organisations.\n\n    \"partOf\": {\n        \"reference\": \"https://directory.spineservices.nhs.uk/R4/Organization/RR805\",\n        \"identifier\": {\n            \"system\": \"https://fhir.nhs.uk/Id/ods-organization-code\",\n            \"value\": \"RR805\n        }",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.partOf.identifier.system",
+        "path": "Organization.partOf.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Organization.partOf.identifier.value",
+        "path": "Organization.partOf.identifier.value",
+        "min": 1
+      }
+    ]
+  }
 }
