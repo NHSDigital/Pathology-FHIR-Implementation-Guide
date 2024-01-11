@@ -1,0 +1,130 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "DataStandardsWales-DiagnosticReport-Lab",
+    "url": "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-DiagnosticReport-Lab",
+    "version": "0.0.5",
+    "name": "DataStandardsWalesDiagnosticReportLab",
+    "title": "Data Standards Wales Diagnostic Report - Lab",
+    "status": "draft",
+    "experimental": true,
+    "date": "2023-05-24",
+    "publisher": "NHS Wales",
+    "copyright": "2023 NHS Wales.",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "DiagnosticReport",
+    "baseDefinition": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-DiagnosticReport",
+    "derivation": "constraint",
+    "differential": {
+        "element":  [
+            {
+                "id": "DiagnosticReport.identifier",
+                "path": "DiagnosticReport.identifier",
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.status",
+                "path": "DiagnosticReport.status",
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.category",
+                "path": "DiagnosticReport.category",
+                "min": 1
+            },
+            {
+                "id": "DiagnosticReport.category.coding",
+                "path": "DiagnosticReport.category.coding",
+                "min": 1
+            },
+            {
+                "id": "DiagnosticReport.category.coding:laboratory",
+                "path": "DiagnosticReport.category.coding",
+                "sliceName": "laboratory",
+                "min": 1,
+                "max": "1",
+                "fixedCoding": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                    "code": "LAB",
+                    "display": "Laboratory"
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.code",
+                "path": "DiagnosticReport.code",
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.subject",
+                "path": "DiagnosticReport.subject",
+                "short": "The subject of the report - which is always a patient for Laboratory Reports",
+                "definition": "The subject of the report - which is always a patient for Laboratory Reports.",
+                "min": 1,
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.encounter",
+                "path": "DiagnosticReport.encounter",
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Encounter"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.effective[x]",
+                "path": "DiagnosticReport.effective[x]",
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.issued",
+                "path": "DiagnosticReport.issued",
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.performer",
+                "path": "DiagnosticReport.performer",
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-CareTeam",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Practitioner",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-PractitionerRole",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Organization"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.result",
+                "path": "DiagnosticReport.result",
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Observation-Lab",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Observation"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            }
+        ]
+    }
+}

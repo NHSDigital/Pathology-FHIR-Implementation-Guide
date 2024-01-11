@@ -1,0 +1,398 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "DataStandardsWales-Patient",
+    "url": "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Patient",
+    "version": "1.0.0",
+    "name": "DataStandardsWalesPatient",
+    "title": "Data Standards Wales Patient",
+    "status": "active",
+    "experimental": false,
+    "date": "2023-08-02",
+    "publisher": "NHS Wales",
+    "copyright": "2023 NHS Wales.",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Patient",
+    "baseDefinition": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient",
+    "derivation": "constraint",
+    "differential": {
+        "element":  [
+            {
+                "id": "Patient.extension",
+                "path": "Patient.extension",
+                "slicing": {
+                    "discriminator":  [
+                        {
+                            "type": "value",
+                            "path": "url"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "min": 0
+            },
+            {
+                "id": "Patient.extension:ethnicCategory",
+                "path": "Patient.extension",
+                "sliceName": "ethnicCategory",
+                "min": 0,
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.extension:religion",
+                "path": "Patient.extension",
+                "sliceName": "religion",
+                "short": "Patient religion",
+                "definition": "A code to indicate the patient's religion",
+                "min": 0,
+                "max": "1",
+                "type":  [
+                    {
+                        "code": "Extension",
+                        "profile":  [
+                            "https://fhir.nhs.wales/StructureDefinition/Extension-DataStandardsWales-Religion"
+                        ]
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Patient.extension:religion.value[x]",
+                "path": "Patient.extension.value[x]",
+                "min": 1
+            },
+            {
+                "id": "Patient.extension:occupation",
+                "path": "Patient.extension",
+                "sliceName": "occupation",
+                "min": 0,
+                "max": "1",
+                "type":  [
+                    {
+                        "code": "Extension",
+                        "profile":  [
+                            "https://fhir.nhs.wales/StructureDefinition/Extension-DataStandardsWales-Occupation"
+                        ]
+                    }
+                ],
+                "isModifier": false
+            },
+            {
+                "id": "Patient.extension:occupation.value[x]",
+                "path": "Patient.extension.value[x]",
+                "min": 1
+            },
+            {
+                "id": "Patient.identifier",
+                "path": "Patient.identifier",
+                "requirements": "To be compliant, at least one identifier shall be provided to uniquely identify the patient.",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.identifier:nhsNumber",
+                "path": "Patient.identifier",
+                "sliceName": "nhsNumber",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.identifier:abuhbPasIdentifier",
+                "path": "Patient.identifier",
+                "sliceName": "abuhbPasIdentifier",
+                "short": "Aneurin Bevan University Health Board PAS patient identifier",
+                "definition": "Aneurin Bevan University Health Board PAS patient identifier"
+            },
+            {
+                "id": "Patient.identifier:abuhbPasIdentifier.system",
+                "path": "Patient.identifier.system",
+                "min": 1,
+                "fixedUri": "https://fhir.abuhb.nhs.wales/Id/pas-identifier"
+            },
+            {
+                "id": "Patient.identifier:abuhbPasIdentifier.value",
+                "path": "Patient.identifier.value",
+                "min": 1
+            },
+            {
+                "id": "Patient.identifier:bcuhbCentralPasIdentifier",
+                "path": "Patient.identifier",
+                "sliceName": "bcuhbCentralPasIdentifier",
+                "short": "Betsi Cadwaladr University Health Board Central PAS patient identifier",
+                "definition": "Betsi Cadwaladr University Health Board Central PAS patient identifier"
+            },
+            {
+                "id": "Patient.identifier:bcuhbCentralPasIdentifier.system",
+                "path": "Patient.identifier.system",
+                "min": 1,
+                "fixedUri": "https://fhir.bcuhb.nhs.wales/Id/central-pas-identifier"
+            },
+            {
+                "id": "Patient.identifier:bcuhbCentralPasIdentifier.value",
+                "path": "Patient.identifier.value",
+                "min": 1
+            },
+            {
+                "id": "Patient.identifier:bcuhbEastPasIdentifier",
+                "path": "Patient.identifier",
+                "sliceName": "bcuhbEastPasIdentifier",
+                "short": "Betsi Cadwaladr University Health Board East PAS patient identifier",
+                "definition": "Betsi Cadwaladr University Health Board East PAS patient identifier"
+            },
+            {
+                "id": "Patient.identifier:bcuhbEastPasIdentifier.system",
+                "path": "Patient.identifier.system",
+                "min": 1,
+                "fixedUri": "https://fhir.bcuhb.nhs.wales/Id/east-pas-identifier"
+            },
+            {
+                "id": "Patient.identifier:bcuhbEastPasIdentifier.value",
+                "path": "Patient.identifier.value",
+                "min": 1
+            },
+            {
+                "id": "Patient.identifier:bcuhbWestPasIdentifier",
+                "path": "Patient.identifier",
+                "sliceName": "bcuhbWestPasIdentifier",
+                "short": "Betsi Cadwaladr University Health Board West PAS patient identifier",
+                "definition": "Betsi Cadwaladr University Health Board West PAS patient identifier"
+            },
+            {
+                "id": "Patient.identifier:bcuhbWestPasIdentifier.system",
+                "path": "Patient.identifier.system",
+                "min": 1,
+                "fixedUri": "https://fhir.bcuhb.nhs.wales/Id/west-pas-identifier"
+            },
+            {
+                "id": "Patient.identifier:bcuhbWestPasIdentifier.value",
+                "path": "Patient.identifier.value",
+                "min": 1
+            },
+            {
+                "id": "Patient.identifier:cavuhbPasIdentifier",
+                "path": "Patient.identifier",
+                "sliceName": "cavuhbPasIdentifier"
+            },
+            {
+                "id": "Patient.identifier:cavuhbPasIdentifier.system",
+                "path": "Patient.identifier.system",
+                "min": 1,
+                "fixedUri": "https://fhir.cavuhb.nhs.wales/Id/pas-identifier"
+            },
+            {
+                "id": "Patient.identifier:cavuhbPasIdentifier.value",
+                "path": "Patient.identifier.value",
+                "min": 1
+            },
+            {
+                "id": "Patient.identifier:ctmuhbPasIdentifier",
+                "path": "Patient.identifier",
+                "sliceName": "ctmuhbPasIdentifier",
+                "short": "Cwm Taf Morgannwg University Health Board PAS patient identifier",
+                "definition": "Cwm Taf Morgannwg University Health Board PAS patient identifier"
+            },
+            {
+                "id": "Patient.identifier:ctmuhbPasIdentifier.system",
+                "path": "Patient.identifier.system",
+                "min": 1,
+                "fixedUri": "https://fhir.ctmuhb.nhs.wales/Id/pas-identifier"
+            },
+            {
+                "id": "Patient.identifier:ctmuhbPasIdentifier.value",
+                "path": "Patient.identifier.value",
+                "min": 1
+            },
+            {
+                "id": "Patient.identifier:hduhbPasIdentifier",
+                "path": "Patient.identifier",
+                "sliceName": "hduhbPasIdentifier",
+                "short": "Hywel Dda University Health Board PAS patient identifier",
+                "definition": "Hywel Dda University Health Board PAS patient identifier"
+            },
+            {
+                "id": "Patient.identifier:hduhbPasIdentifier.system",
+                "path": "Patient.identifier.system",
+                "min": 1,
+                "fixedUri": "https://fhir.hduhb.nhs.wales/Id/pas-identifier"
+            },
+            {
+                "id": "Patient.identifier:hduhbPasIdentifier.value",
+                "path": "Patient.identifier.value",
+                "min": 1
+            },
+            {
+                "id": "Patient.identifier:pthbPasIdentifier",
+                "path": "Patient.identifier",
+                "sliceName": "pthbPasIdentifier",
+                "short": "Powys Teaching Health Board PAS patient identifier",
+                "definition": "Powys Teaching Health Board PAS patient identifier"
+            },
+            {
+                "id": "Patient.identifier:pthbPasIdentifier.system",
+                "path": "Patient.identifier.system",
+                "min": 1,
+                "fixedUri": "https://fhir.pthb.nhs.wales/Id/pas-identifier"
+            },
+            {
+                "id": "Patient.identifier:pthbPasIdentifier.value",
+                "path": "Patient.identifier.value",
+                "min": 1
+            },
+            {
+                "id": "Patient.identifier:sbuhbPasIdentifier",
+                "path": "Patient.identifier",
+                "sliceName": "sbuhbPasIdentifier",
+                "short": "Swansea Bay University Health Board PAS patient identifier",
+                "definition": "Swansea Bay University Health Board PAS patient identifier"
+            },
+            {
+                "id": "Patient.identifier:sbuhbPasIdentifier.system",
+                "path": "Patient.identifier.system",
+                "min": 1,
+                "fixedUri": "https://fhir.sbuhb.nhs.wales/Id/pas-identifier"
+            },
+            {
+                "id": "Patient.identifier:sbuhbPasIdentifier.value",
+                "path": "Patient.identifier.value",
+                "min": 1
+            },
+            {
+                "id": "Patient.identifier:vunhstCaniscIdentifier",
+                "path": "Patient.identifier",
+                "sliceName": "vunhstCaniscIdentifier",
+                "short": "Velindre Universtity NHS Trust Canisc (PAS) patient identifier",
+                "definition": "Velindre Universtity NHS Trust Canisc (PAS) patient identifier"
+            },
+            {
+                "id": "Patient.identifier:vunhstCaniscIdentifier.system",
+                "path": "Patient.identifier.system",
+                "min": 1,
+                "fixedUri": "https://fhir.vunhst.nhs.wales/Id/canisc-identifier"
+            },
+            {
+                "id": "Patient.identifier:vunhstCaniscIdentifier.value",
+                "path": "Patient.identifier.value",
+                "min": 1
+            },
+            {
+                "id": "Patient.identifier:vunhstPasIdentifier",
+                "path": "Patient.identifier",
+                "sliceName": "vunhstPasIdentifier",
+                "short": "Velindre Universtity NHS Trust PAS patient identifier",
+                "definition": "Velindre Universtity NHS Trust PAS patient identifier"
+            },
+            {
+                "id": "Patient.identifier:vunhstPasIdentifier.system",
+                "path": "Patient.identifier.system",
+                "min": 1,
+                "fixedUri": "https://fhir.vunhst.nhs.wales/Id/pas-identifier"
+            },
+            {
+                "id": "Patient.identifier:vunhstPasIdentifier.value",
+                "path": "Patient.identifier.value",
+                "min": 1
+            },
+            {
+                "id": "Patient.active",
+                "path": "Patient.active",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.name",
+                "path": "Patient.name",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.name.family",
+                "path": "Patient.name.family",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.name.given",
+                "path": "Patient.name.given",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.name.prefix",
+                "path": "Patient.name.prefix",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "description": "Data Standards Wales Title",
+                    "valueSet": "https://fhir.nhs.wales/ValueSet/DataStandardsWales-Title"
+                }
+            },
+            {
+                "id": "Patient.name.suffix",
+                "path": "Patient.name.suffix",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.telecom",
+                "path": "Patient.telecom",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.gender",
+                "path": "Patient.gender",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.birthDate",
+                "path": "Patient.birthDate",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.deceased[x]",
+                "path": "Patient.deceased[x]",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.address",
+                "path": "Patient.address",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.address.postalCode",
+                "path": "Patient.address.postalCode",
+                "definition": "A postal code designating a region defined by the postal service.\n\nFormat: 8 character alphanumeric\nThe specific code format as specified by the Office of National statistics (ONS)\n\nData description\nUnit postcode – 8 character version\n\nRange of codes/ Entity code\nAB1 Δ Δ 1AA - ZE99 Δ 9ZZ (maximum range)\n\nComments\n2, 3 or 4-character outward code - left aligned;\n3-character inward code - right aligned;\n5th character always blank and\n3rd and 4th characters may be blank (Δ)\n\nThis allows a space to be inserted to differentiate between the inward and outward segments of the code, enabling full use to be made of the Royal Mail postcode functionality.",
+                "requirements": "This guidance is based upon the published Data Standards Wales (DSW) recommendation for representing the postal code in systems.  While this is the preferred representation it is understood that some systems may not currently comply to the standard.  As such, this should be taken as guidance only. No software constraints have been placed on the data element to reject certain patterns therefore any string value sent is acceptable. However, it is best practice to follow the standard set out below for any new implementation or if a current system is being updated to conform to DSW standards.\n\nPlease reference https://www.datadictionary.wales.nhs.uk/#!WordDocuments/informationspecification65.htm for full details on this data standard.",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.maritalStatus",
+                "path": "Patient.maritalStatus",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.communication.language",
+                "path": "Patient.communication.language",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.generalPractitioner",
+                "path": "Patient.generalPractitioner",
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Organization"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "Patient.managingOrganization",
+                "path": "Patient.managingOrganization",
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Organization"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

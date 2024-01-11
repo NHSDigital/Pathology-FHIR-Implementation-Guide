@@ -1,0 +1,190 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "DataStandardsWales-ServiceRequest",
+    "url": "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-ServiceRequest",
+    "version": "0.0.5",
+    "name": "DataStandardsWalesServiceRequest",
+    "title": "Data Standards Wales Service Request",
+    "status": "draft",
+    "experimental": true,
+    "date": "2023-05-24",
+    "publisher": "NHS Wales",
+    "copyright": "2023 NHS Wales.",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "ServiceRequest",
+    "baseDefinition": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-ServiceRequest",
+    "derivation": "constraint",
+    "differential": {
+        "element":  [
+            {
+                "id": "ServiceRequest.identifier",
+                "path": "ServiceRequest.identifier",
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.basedOn",
+                "path": "ServiceRequest.basedOn",
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-CarePlan",
+                            "https://fhir.hl7.org.uk/StructureDefinition/DataStandardsWales-MedicationRequest",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-ServiceRequest"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ServiceRequest.replaces",
+                "path": "ServiceRequest.replaces",
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-ServiceRequest"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ServiceRequest.status",
+                "path": "ServiceRequest.status",
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.intent",
+                "path": "ServiceRequest.intent",
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.category",
+                "path": "ServiceRequest.category",
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.priority",
+                "path": "ServiceRequest.priority",
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.code",
+                "path": "ServiceRequest.code",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.subject",
+                "path": "ServiceRequest.subject",
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "http://hl7.org/fhir/StructureDefinition/Group",
+                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Device",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Patient",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Location"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.encounter",
+                "path": "ServiceRequest.encounter",
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Encounter"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ServiceRequest.authoredOn",
+                "path": "ServiceRequest.authoredOn",
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.requester",
+                "path": "ServiceRequest.requester",
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Device",
+                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Organization",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Patient",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Practitioner",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-PractitionerRole"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.performer",
+                "path": "ServiceRequest.performer",
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-CareTeam",
+                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Device",
+                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-HealthcareService",
+                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Organization",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Patient",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Practitioner",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-PractitionerRole"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ServiceRequest.locationReference",
+                "path": "ServiceRequest.locationReference",
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Location"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ServiceRequest.reasonReference",
+                "path": "ServiceRequest.reasonReference",
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Condition",
+                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-DocumentReference",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Observation",
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-DiagnosticReport"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ServiceRequest.specimen",
+                "path": "ServiceRequest.specimen",
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Specimen"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            }
+        ]
+    }
+}
