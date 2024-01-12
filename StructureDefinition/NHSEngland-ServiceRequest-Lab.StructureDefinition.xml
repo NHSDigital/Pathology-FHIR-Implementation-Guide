@@ -37,10 +37,18 @@
       <path value="ServiceRequest.code.coding.code" />
       <min value="1" />
     </element>
+     <element id="ServiceRequest.subject">
+      <path value="ServiceRequest.subject" />
+      <type>
+        <code value="Reference" />
+        <aggregation value="bundled" />
+      </type>
+    </element>
     <element id="ServiceRequest.specimen">
       <path value="ServiceRequest.specimen" />
       <type>
         <code value="Reference" />
+        <aggregation value="bundled" />
         <targetProfile value="https://fhir.nhs.uk/England/StructureDefinition/Specimen" />
       </type>
     </element>
