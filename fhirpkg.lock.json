@@ -1,8 +1,11 @@
 {
-  "updated": "2024-01-08T11:05:40.8724478+00:00",
+  "updated": "2024-01-15T09:19:26.4414059+00:00",
   "dependencies": {
     "fhir.r4.ukcore.stu3.currentbuild": "0.0.8-pre-release",
-    "hl7.fhir.r4.core": "4.0.1"
+    "hl7.fhir.r4.core": "4.0.1",
+    "hl7.fhir.uv.ips": "1.1.0",
+    "hl7.terminology.r4": "5.0.0",
+    "fhir.dicom": "2022.4.20221006"
   },
   "missing": {}
 }
