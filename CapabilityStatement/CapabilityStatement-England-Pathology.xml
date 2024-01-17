@@ -14,8 +14,14 @@
 	<rest>
 		<mode value="server"/>
 		<resource>
+			<type value="Composition"/>
+			<profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Composition"/>
+			<supportedProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"/>
+		</resource>
+		<resource>
 			<type value="DiagnosticReport"/>
 			<profile value="https://fhir.nhs.uk/England/StructureDefinition/DiagnosticReport-Lab"/>
+			<supportedProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"/>
 		</resource>
 		<resource>
 			<type value="ImagingStudy"/>
@@ -24,6 +30,17 @@
 		<resource>
 			<type value="Observation"/>
 			<profile value="https://fhir.nhs.uk/England/StructureDefinition/Observation-Lab"/>
+			<supportedProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips"/>
+		</resource>
+		<resource>
+			<type value="Questionnaire"/>
+			<profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Questionnaire"/>
+			<supportedProfile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"/>
+		</resource>
+		<resource>
+			<type value="QuestionnaireResponse"/>
+			<profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-QuestionnaireResponse"/>
+			<supportedProfile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"/>
 		</resource>
 		<resource>
 			<type value="ServiceRequest"/>
