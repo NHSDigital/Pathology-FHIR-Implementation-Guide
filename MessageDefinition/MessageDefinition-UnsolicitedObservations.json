@@ -22,7 +22,7 @@
     "focus":  [
         {
             "code": "DiagnosticReport",
-            "profile": "https://fhir.nhs.uk/England/StructureDefinition/DiagnosticReport-Lab",
+            "profile": "https://fhir.nhs.uk/England/StructureDefinition/DiagnosticReport-Lab-Message",
             "min": 1,
             "max": "*"
         }

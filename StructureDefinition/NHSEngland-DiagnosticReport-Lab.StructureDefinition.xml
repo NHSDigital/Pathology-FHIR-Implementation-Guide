@@ -42,13 +42,6 @@
       <path value="DiagnosticReport.code.coding.code" />
       <min value="1" />
     </element>
-    <element id="DiagnosticReport.subject">
-      <path value="DiagnosticReport.subject" />
-      <type>
-        <code value="Reference" />
-        <aggregation value="bundled" />
-      </type>
-    </element>
     <element id="DiagnosticReport.issued">
       <path value="DiagnosticReport.issued" />
       <min value="1" />
@@ -64,7 +57,6 @@
       <path value="DiagnosticReport.result" />
       <type>
         <code value="Reference" />
-        <aggregation value="bundled" />
         <targetProfile value="https://fhir.nhs.uk/England/StructureDefinition/Observation-Lab" />
         <targetProfile value="https://fhir.nhs.uk/England/StructureDefinition/Observation-Group-Lab" />
       </type>

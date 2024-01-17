@@ -21,7 +21,7 @@
     "focus":  [
         {
             "code": "ServiceRequest",
-            "profile": "https://fhir.nhs.uk/England/StructureDefinition/ServiceRequest-Lab",
+            "profile": "https://fhir.nhs.uk/England/StructureDefinition/ServiceRequest-Lab-Message",
             "min": 1,
             "max": "*"
         }
