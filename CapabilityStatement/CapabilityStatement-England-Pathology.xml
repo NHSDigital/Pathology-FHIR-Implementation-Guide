@@ -50,5 +50,20 @@
 			<type value="Specimen"/>
 			<profile value="https://fhir.nhs.uk/England/StructureDefinition/Specimen"/>
 		</resource>
+			<resource>
+			<type value="MedicationRequest"/>
+			<profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationRequest"/>
+			<supportedProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips"/>
+		</resource>
+		<resource>
+			<type value="MedicationStatement"/>
+			<profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationStatement"/>
+			<supportedProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"/>
+		</resource>
+		<resource>
+			<type value="AllergyIntolerance"/>
+			<profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-AllergyIntolerance"/>
+			<supportedProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"/>
+		</resource>
 	</rest>
 </CapabilityStatement>
