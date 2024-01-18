@@ -1,0 +1,81 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "England-Pathology-Conformance",
+  "url": "https://fhir.hl7.org.uk/CapabilityStatement/England-Pathology-Conformance",
+  "version": "3.2.0",
+  "name": "EnglandPathologyConformance",
+  "status": "active",
+  "date": "2022-12-16T00:00:00+00:00",
+  "publisher": "HL7 UK",
+  "description": "Conformance requirements for NHSEngland Pathology",
+  "kind": "requirements",
+  "fhirVersion": "4.0.1",
+  "format": [
+    "application/fhir+json",
+    "application/fhir+xml"
+  ],
+  "rest": [
+    {
+      "mode": "server",
+      "resource": [
+        {
+          "type": "DiagnosticReport",
+          "profile": "https://fhir.nhs.uk/England/StructureDefinition/DiagnosticReport-Lab",
+          "supportedProfile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"
+          ]
+        },
+        {
+          "type": "Observation",
+          "profile": "https://fhir.nhs.uk/England/StructureDefinition/Observation-Lab",
+          "supportedProfile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips"
+          ]
+        },
+        {
+          "type": "Questionnaire",
+          "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Questionnaire",
+          "supportedProfile": [
+            "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+          ]
+        },
+        {
+          "type": "QuestionnaireResponse",
+          "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-QuestionnaireResponse",
+          "supportedProfile": [
+            "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"
+          ]
+        },
+        {
+          "type": "ServiceRequest",
+          "profile": "https://fhir.nhs.uk/England/StructureDefinition/ServiceRequest-Lab"
+        },
+        {
+          "type": "Specimen",
+          "profile": "https://fhir.nhs.uk/England/StructureDefinition/Specimen"
+        },
+        {
+          "type": "MedicationRequest",
+          "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationRequest",
+          "supportedProfile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips"
+          ]
+        },
+        {
+          "type": "MedicationStatement",
+          "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationStatement",
+          "supportedProfile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
+          ]
+        },
+        {
+          "type": "AllergyIntolerance",
+          "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-AllergyIntolerance",
+          "supportedProfile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"
+          ]
+        }
+      ]
+    }
+  ]
+}
